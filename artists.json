@@ -1,0 +1,24 @@
+[
+  {
+    "songs": [
+      {
+        "title": "Summer Vibes",
+        "lyrics": "La la la...",
+        "artistUsername": "john_doe",
+        "likes": 0,
+        "comments": []
+      },
+      {
+        "title": "Night Sky",
+        "lyrics": "Stars above...",
+        "artistUsername": "john_doe",
+        "likes": 0,
+        "comments": []
+      }
+    ],
+    "albums": [],
+    "username": "john_doe",
+    "password": "pass123",
+    "email": "john@example.com"
+  }
+]

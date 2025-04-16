@@ -1,0 +1,18 @@
+[
+  {
+    "type": "admin",
+    "username": "admin123",
+    "password": "adminpass",
+    "email": "admin@example.com"
+  },
+  {
+    "type": "artist",
+    "approved": true,
+    "songs": [],
+    "albums": [],
+    "username": "artist123",
+    "password": "artistpass",
+    "email": "artist@example.com",
+    "role": "ARTIST"
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Test Album",
+    "artist": {
+      "type": "artist",
+      "username": "artist123",
+      "password": "artistpass",
+      "email": "artist@example.com",
+      "approved": true,
+      "songs": [],
+      "albums": []
+    },
+    "songs": []
+  }
+]

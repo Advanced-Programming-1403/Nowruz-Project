@@ -12,5 +12,12 @@
     "username": "zahra",
     "password": "456",
     "email": "zahra@mail.com"
+  },
+  {
+    "favoriteSongs": [],
+    "comments": [],
+    "username": "mamad",
+    "password": "mh4831",
+    "email": "mamad@mail.com"
   }
 ]
