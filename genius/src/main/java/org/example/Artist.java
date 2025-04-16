@@ -4,40 +4,47 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Artist extends Account {
+    private boolean approved;
     private List<Song> songs;
     private List<Album> albums;
 
-    public Artist(String username, String password, String email) {
-        super(username, password, email);
+    public Artist() {
+        super();
+        this.role = Role.ARTIST;
+        this.approved = false;
         this.songs = new ArrayList<>();
         this.albums = new ArrayList<>();
     }
 
-    // Getterها
+    public Artist(String username, String password, String email) {
+        super(username, password, email);
+        this.role = Role.ARTIST;
+        this.approved = false;
+        this.songs = new ArrayList<>();
+        this.albums = new ArrayList<>();
+    }
+
+    public boolean isApproved() {
+        return approved;
+    }
+
+    public void approve() {
+        this.approved = true;
+    }
+
+    public void addSong(Song song) {
+        this.songs.add(song);
+    }
+
     public List<Song> getSongs() {
         return songs;
     }
 
+    public void addAlbum(Album album) {
+        this.albums.add(album);
+    }
+
     public List<Album> getAlbums() {
         return albums;
-    }
-
-    // متدهای اضافه کردن
-    public void addSong(Song song) {
-        songs.add(song);
-    }
-
-    public void addAlbum(Album album) {
-        albums.add(album);
-    }
-
-    @Override
-    public String toString() {
-        return "Artist{" +
-                "username='" + username + '\'' +
-                ", email='" + email + '\'' +
-                ", songs=" + songs.size() +
-                ", albums=" + albums.size() +
-                '}';
     }
 }

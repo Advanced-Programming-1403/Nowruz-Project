@@ -9,10 +9,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public class DataManager {
-    private static final Gson gson = new GsonBuilder()
-            .registerTypeAdapter(LocalDateTime.class, new LocalDateTimeAdapter())
-            .setPrettyPrinting()
-            .create();
+    private static final Gson gson = AccountAdapterFactory.getAccountGson();
 
 
     public static <T> void saveData(List<T> data, String filePath) {

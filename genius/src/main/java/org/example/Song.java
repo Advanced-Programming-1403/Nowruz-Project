@@ -6,34 +6,31 @@ import java.util.List;
 public class Song {
     private String title;
     private String lyrics;
-    private Artist artist;
+    private String artistUsername; // instead of full Artist object
     private Album album;
     private int likes;
     private List<Comment> comments;
 
-    public Song(String title, String lyrics, Artist artist, Album album) {
+    public Song(String title, String lyrics, String artistUsername, Album album) {
         this.title = title;
         this.lyrics = lyrics;
-        this.artist = artist;
+        this.artistUsername = artistUsername;
         this.album = album;
         this.likes = 0;
         this.comments = new ArrayList<>();
     }
 
-    // Getterها
     public String getTitle() { return title; }
     public String getLyrics() { return lyrics; }
-    public Artist getArtist() { return artist; }
+    public String getArtistUsername() { return artistUsername; }
     public Album getAlbum() { return album; }
     public int getLikes() { return likes; }
     public List<Comment> getComments() { return comments; }
 
-    // Setterها
     public void setTitle(String title) { this.title = title; }
     public void setLyrics(String lyrics) { this.lyrics = lyrics; }
     public void setAlbum(Album album) { this.album = album; }
 
-    // عملکردها
     public void like() {
         likes++;
     }
@@ -46,7 +43,7 @@ public class Song {
     public String toString() {
         return "Song{" +
                 "title='" + title + '\'' +
-                ", artist=" + artist.getUsername() +
+                ", artistUsername='" + artistUsername + '\'' +
                 ", likes=" + likes +
                 ", comments=" + comments.size() +
                 '}';

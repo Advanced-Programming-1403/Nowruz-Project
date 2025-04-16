@@ -11,6 +11,10 @@ public class Account {
         this.email = email;
     }
 
+    public Account() {
+
+    }
+
     // Getterها
     public String getUsername() { return username; }
     public String getPassword() { return password; }
@@ -28,4 +32,15 @@ public class Account {
                 ", email='" + email + '\'' +
                 '}';
     }
+    public enum Role {
+        USER,
+        ARTIST,
+        ADMIN
+    }
+    protected Role role;
+
+    public Role getRole() {
+        return role;
+    }
+
 }
